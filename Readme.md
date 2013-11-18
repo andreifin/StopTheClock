@@ -66,13 +66,13 @@ Chrome 30.0.1599 (Mac OS X 10.7.5): Executed 2 of 2 SUCCESS (0.197 secs / 0.027 
 Now take a look at the test code in `test/spec/controllers/main.ls'. This is following the pattern used by the jasmine test framework - which has excellent documentation at http://pivotal.github.io/jasmine/ which you'll need to read through. 
 
 I've added lines 14 and 15 to the standard setup code to set the clock variables up to 10 hours and 30 minutes, and then added the two tests which check the operation of the turn function. 
-
+```
   it 'should turn minutes hand by 180deg for 30 minutes', ->
     expect(scope.turn('minute')["-webkit-transform"]).toEqual "rotate(180deg)"
 
   it 'should turn hour hand by 315deg for 10 hours and 30minutes', ->
     expect(scope.turn('hour')["-webkit-transform"]).toEqual "rotate(315deg)"
-
+```
 Tests like this are usually short and sweet - you create them to test a function, and you check that the function is giving the expected result for some given inputs. Sometimes you need to provide a few different inputs and expected outputs to make sure that you've checked the function works properly. 
 
 These 2 tests are probably sufficient here, but as an exercise, add another test to check that the turn function returns an undefined value (on key '-webkit-transform') if asked for the seconds hand turn. Checkout Step3 for more tests and a solution to this.
