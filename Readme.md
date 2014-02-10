@@ -18,11 +18,11 @@ git clone https://github.com/gmp26/StopTheClock.git Step0
 ```
 
 That will create a Step0 directory, but it won't have installed the node modules and bower modules it needs. To do that:
-
+```
 cd Step0 
 npm install
 bower install
-
+```
 To test everything is working,
 grunt server
 (Ctrl-C to stop the server)
