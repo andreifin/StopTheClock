@@ -50,7 +50,7 @@ So what's changed between Step0 and Step1? Actually, not very much :)
 * There's some some new HTML in app/views/main.html, which assembles the clock graphics into a clock using those styles.
 * And there's some new code in app/scripts/controllers/main.ls which updates the clock every second.
 
-The time in text is really simple - it comes from the HTML <h2>The time is {{hours}}:{{minutes}}</h2> line, 
+The time in text is really simple - it comes from the HTML &lt;h2>The time is {{hours}}:{{minutes}}&lt;/h2> line, 
 where {{hours}} and {{minutes}} are interpolating values defined as $scope.hours and $scope.minutes by the controller at app/scripts/controllers/main.ls.
 
 The analogue clock is doing much the same thing, except that it is calling a $scope.turn function to retrieve the CSS style commands necessary to turn the hands. These are a little verbose as each browser needs a different prefix at the moment.
